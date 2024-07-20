@@ -50,16 +50,19 @@ public class AreaCalculator {
 
             switch (shapeType) {
                 case "c":
+                    System.out.println("CIRCLE");
                     double radius = Console.getDouble("Enter radius: ");
                     shape = new Circle(radius);
                     break;
 
                 case "s":
+                    System.out.println("SQUARE");
                     double width = Console.getDouble("Enter width: ");
                     shape = new Square(width);
                     break;
 
                 case "r":
+                    System.out.println("RECTANGLE");
                     double rWidth = Console.getDouble("Enter width: ");
                     double height = Console.getDouble("Enter height: ");
                     shape = new Rectangle(rWidth, height);
@@ -70,7 +73,7 @@ public class AreaCalculator {
                     continue;
             }
 
-            System.out.println(shape.toString());
+            System.out.println(shape);
             choice = Console.getString("Continue? (y/n): ");
         }
     }
